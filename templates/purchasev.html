@@ -1,0 +1,73 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+
+    Incoming Purchases
+
+{% endblock %}
+
+
+{% block heading %}
+
+    Incoming Purchases
+
+{% endblock %}
+
+
+{% block main %}
+<div class="conatiner-fluid content-inner mt-n5 py-0">
+  <div class="row">
+    <div class="col-12 ">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <div class="header-title">
+                    <h4 class="card-title">Outgoing Orders</h4>
+                </div>
+            </div>
+            <div class="card-body">
+                <form class="user" action="/purchasev" method="POST">
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="form-label" for="purchase-date">Date of purchase:</label>
+                            <input type="date" class="form-control" name="purchase-date" placeholder="Date of purchase" required>
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="form-label" for="product-name">Product Name:</label>
+                            <select class="form-control" name="product-name">
+                                <option value="" selected disabled>Select Product</option>
+                                {% for product in products %}
+
+                                <option value="{{ product.productName }}">{{ product.id }} | {{ product.productName }} - {{ product.partNumber }}</option>
+
+                                {% endfor %}
+                            </select>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="form-group col-6">
+                            <label class="form-label" for="purchases">Number of Purchases:</label>
+                            <input type="number" class="form-control" name="purchases" placeholder="Number Received" required>
+                        </div>
+                        <div class="form-group col-6">
+                            <label class="form-label" for="supplier-name">Select Supplier</label>
+                            <select class="form-control" name="supplier-name">
+                                <option value="" selected  disabled>Select Supplier</option>
+                                {% for supplier in suppliers %}
+
+                                <option value="{{ supplier.supplier }}">{{ supplier.id }} | {{ supplier.supplier }}</option>
+
+                                {% endfor %}
+                            </select>                                
+                        </div>
+                    </div>
+                    
+                    <button type="submit" class="btn btn-primary float-end">Submit</button>
+                    <button type="reset" class="btn btn-danger">cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+</div>
+</div>
+{% endblock %}

@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width ,initial-scale=1.0">
+    <link rel="stylesheet" href="../static/css/login.css"  type="text/css" media="screen">
+     <!-- semantic UI -->
+     <!------aos------->
+     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+        <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+</head>
+<body>
+    <section class="grid-container">
+        <div class="grid-item1" id="grid-item1">
+            <div class="clg-title">
+                <div class="logo">
+                </div>
+                <div class="title">
+                    <h2>SRM Valliammai Engineering College</h2>
+                    <h4>( AN AUTONOMOUS INSTITUTION )</h4>
+                </div>
+                <div class="logo">
+                </div>
+            </div>
+            <div class="clg-body" id="clg-body">
+               
+                <h1>
+                    Welcome!!
+                </h1>
+                <p data-aos="fade-up">Welcome to SRM VEC Desk!! Our Desk provides vital support for Staffs and Engineers, complementing Technical Support.This gives essential support for technical team and staffs to maintain the college system in greater way !!</p>
+            </div>
+        </div>
+        </div>
+        <div class="grid-item2" id="grid-item2">
+          
+          <form  class="user" action="/register" method="POST">
+                <h2>LOGIN</h2>
+                <label for="username">Full Name</label>
+                <input type="text" name="fullname" required>
+                <label for="username">User Name</label>
+                <input type="text" name="username" aria-describedby="emailHelp" required>
+                <label for="password">Password</label>
+                <input type="password" name="pwd" required>
+                <label for="username">Conform Password</label>
+                <input type="password" class="form-control form-control-user" name="pwd-again" required>
+                <button value="Log In" type="submit">Register</button>
+                <div class="text-center">
+                  <a class="small" href="/">Already have an account? Log In!</a>
+                </div>
+            </form>
+        </div>
+    </section>
+    <script>
+      AOS.init();
+      
+    </script>
+
+</body>
+</html>
+
+
+
+
+
+
+
+

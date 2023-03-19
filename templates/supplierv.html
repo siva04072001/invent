@@ -1,0 +1,45 @@
+{% extends "layout.html" %}
+
+
+{% block title %}
+
+    Suppliers
+
+{% endblock %}
+
+
+{% block heading %}
+
+    Supliers
+
+{% endblock %}
+
+
+{% block main %}
+<div class="conatiner-fluid content-inner mt-n5 py-0">
+  <div class="row">
+    <div class="col-12 ">
+        <div class="card">
+            <div class="card-header d-flex justify-content-between">
+                <div class="header-title">
+                    <h4 class="card-title">Outgoing Orders</h4>
+                </div>
+            </div>
+            <div class="card-body">
+                <form class="user" action="/supplierv" method="POST">
+                    <div class="row">
+                        <div class="form-group col-12">
+                            <label class="form-label" for="supplier-name">Supplier Name</label>
+                            <input type="text" class="form-control" name="supplier" placeholder="Supplier Name" required>
+                        </div>
+                      </div>
+                    
+                    <button type="submit" class="btn btn-primary float-end">Submit</button>
+                    <button type="reset" class="btn btn-danger">cancel</button>
+                </form>
+            </div>
+        </div>
+    </div>
+  </div>
+</div>
+{% endblock %}
